@@ -8,10 +8,13 @@ class Solution:
         j = n-1
         
         while i < n - 1:
-            if numbers[i] + numbers[j] > target:
+            
+            total = numbers[i] + numbers[j]
+            
+            if total > target:
                 j -= 1
                 
-            elif numbers[j] + numbers[i] < target:
+            elif total < target:
                 i += 1
                 
             else:
